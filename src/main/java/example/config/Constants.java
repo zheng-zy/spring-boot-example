@@ -3,8 +3,6 @@ package example.config;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
-import javax.validation.constraints.NotNull;
-
 /**
  * 获取配置文件属性
  * Created by zhezhiyong@163.com on 2016/11/11.
@@ -16,9 +14,7 @@ import javax.validation.constraints.NotNull;
 )
 @Component
 public class Constants {
-    @NotNull
     private String server;
-    @NotNull
     private int port;
 
     public String getServer() {

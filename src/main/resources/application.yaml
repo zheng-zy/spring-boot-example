@@ -4,6 +4,15 @@ spring:
 ---
 spring:
   profiles: development
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/test?zeroDateTimeBehavior=convertToNull
     username: root
@@ -40,8 +49,10 @@ logging:
     org.spring.framework: ERROR
     com.ktvme.helios.mapper: DEBUG
     org.mybatis: INFO
-  file: ./target/logs/helios.log
-  path: ./logs
+  file: ./target/logs/app.log
+
+#  path: ./target/logs
+#  config: classpath:logback-app.xml
 ---
 spring:
   profiles: test

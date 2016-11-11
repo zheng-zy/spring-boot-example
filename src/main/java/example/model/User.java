@@ -1,6 +1,7 @@
 package example.model;
 
 /**
+ * <p></p>
  * Created by zhezhiyong@163.com on 2016/10/13.
  */
 public class User {
