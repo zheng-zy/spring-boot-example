@@ -1,0 +1,3 @@
+config:
+  server: example
+  port: 8888

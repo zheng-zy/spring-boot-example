@@ -42,7 +42,6 @@ logging:
     org.mybatis: INFO
   file: ./target/logs/helios.log
   path: ./logs
-
 ---
 spring:
   profiles: test
