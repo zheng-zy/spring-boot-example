@@ -1,0 +1,49 @@
+spring:
+  profiles.active: development
+
+---
+spring:
+  profiles: development
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/test?zeroDateTimeBehavior=convertToNull
+    username: root
+    password: 666666
+    driver-class-name: com.mysql.jdbc.Driver
+    platform: mysql
+    initialize: false
+    sql-script-encoding: UTF-8
+  redis:
+    database: 1
+    host: 192.168.97.192
+    port: 6379
+    pool:
+      max-idle: 8
+      min-idle: 0
+      max-active: 8
+      max-wait: -1
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: yg
+    password: yg
+    virtual-host: /ygrpc
+  data:
+    mongodb:
+      uri: mongodb://192.168.97.192:27017/test
+    elasticsearch:
+      cluster-nodes: 192.168.97.192:9300
+server:
+  port: 8888
+  context-path: /example
+logging:
+  level:
+    org.spring.framework: ERROR
+    com.ktvme.helios.mapper: DEBUG
+    org.mybatis: INFO
+  file: ./target/logs/helios.log
+  path: ./logs
+
+---
+spring:
+  profiles: test
+
