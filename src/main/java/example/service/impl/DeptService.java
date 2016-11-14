@@ -1,7 +1,7 @@
 package example.service.impl;
 
-import example.dao.DeptDao;
-import example.domain.Dept;
+import example.domain.primary.Dept;
+import example.repository.primary.DeptRepository;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -14,10 +14,10 @@ import javax.annotation.Resource;
 public class DeptService {
 
     @Resource
-    private DeptDao deptDao;
+    private DeptRepository deptRepository;
 
     public Dept findByid(Long id) {
-        return deptDao.findById(id);
+        return deptRepository.findById(id);
     }
 
 }

@@ -12,15 +12,22 @@ spring:
       naming:
         strategy: org.hibernate.cfg.ImprovedNamingStrategy
     properties:
-      hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
+      hibernate.dialect: org.hibernate.dialect.MySQL5InnoDBDialect
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/test?zeroDateTimeBehavior=convertToNull
+    url: jdbc:mysql://127.0.0.1:3306/test?zeroDateTimeBehavior=convertToNull&useSSL=false
     username: root
     password: 666666
     driver-class-name: com.mysql.jdbc.Driver
-    platform: mysql
     initialize: false
+    platform: mysql
     sql-script-encoding: UTF-8
+  secondary:
+    url: jdbc:mysql://127.0.0.1:3306/koubei?zeroDateTimeBehavior=convertToNull&useSSL=false
+    username: root
+    password: 666666
+    driver-class-name: com.mysql.jdbc.Driver
+    initialize: false
+
   redis:
     database: 1
     host: 192.168.97.192

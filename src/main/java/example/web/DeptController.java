@@ -1,7 +1,7 @@
 package example.web;
 
-import example.dao.DeptDao;
-import example.domain.Dept;
+import example.domain.primary.Dept;
+import example.repository.primary.DeptRepository;
 import example.service.impl.DeptService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -20,26 +20,26 @@ public class DeptController {
     @Resource
     private DeptService deptService;
     @Resource
-    private DeptDao deptDao;
+    private DeptRepository deptRepository;
 
     @PostMapping
     @ApiOperation("添加部门")
     private boolean add(@RequestBody Dept dept) {
-        deptDao.save(dept);
+        deptRepository.save(dept);
         return true;
     }
 
     @DeleteMapping("/{id}")
     @ApiOperation("删除部门")
     private boolean delete(@PathVariable Long id) {
-        deptDao.delete(id);
+        deptRepository.delete(id);
         return true;
     }
 
     @PutMapping
     @ApiOperation("更新部门")
     private boolean put(@RequestBody Dept dept) {
-        deptDao.save(dept);
+        deptRepository.save(dept);
         return true;
     }
 
