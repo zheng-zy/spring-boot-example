@@ -8,5 +8,6 @@ spring boot standard project, quick start.
 # springloaded 热部署
 * idea配置mvn启动
 * 快捷键ctrl+shift+f9编译
+* 配置多数据源
 
 

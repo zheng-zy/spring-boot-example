@@ -37,7 +37,7 @@ public class JpaSecondaryConfig {
         return DataSourceBuilder.create().build();
     }
 
-    @Bean("secondaryEntityManagerFactory")
+    @Bean(name = "secondaryEntityManagerFactory")
     public LocalContainerEntityManagerFactoryBean secondaryEntityManagerFactory(EntityManagerFactoryBuilder builder,
                                                                                 @Qualifier("secondaryDataSource") DataSource secondaryDataSource) {
         Map<String, String> hibernateProperties = jpaProperties.getHibernateProperties(secondaryDataSource);

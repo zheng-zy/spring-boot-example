@@ -39,7 +39,7 @@ public class JpaPrimaryConfig {
     }
 
 
-    @Bean("entityManagerFactory")
+    @Bean(name = "entityManagerFactory")
     @Primary
     public LocalContainerEntityManagerFactoryBean entityManagerFactory(EntityManagerFactoryBuilder builder, @Qualifier("dataSource") DataSource dataSource) {
         Map<String, String> hibernateProperties = jpaProperties.getHibernateProperties(dataSource);
