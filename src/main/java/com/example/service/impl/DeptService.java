@@ -1,7 +1,7 @@
-package example.service.impl;
+package com.example.service.impl;
 
-import example.dao.DeptDao;
-import example.domain.Dept;
+import com.example.dao.DeptDao;
+import com.example.domain.Dept;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

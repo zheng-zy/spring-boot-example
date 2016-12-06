@@ -6,7 +6,7 @@ spring boot standard project, quick start.
 [启动后访问地址](http://localhost:8080/swagger-ui.html)
 
 # springloaded 热部署
-* idea配置mvn启动
+* idea配置mvn启动`spring-boot:run`
 * 快捷键ctrl+shift+f9编译
 
 

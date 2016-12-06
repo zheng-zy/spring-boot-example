@@ -1,6 +1,6 @@
-package example.dao;
+package com.example.dao;
 
-import example.domain.Dept;
+import com.example.domain.Dept;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 import javax.transaction.Transactional;

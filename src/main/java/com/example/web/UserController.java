@@ -1,6 +1,7 @@
-package example.web;
+package com.example.web;
 
-import example.model.User;
+import com.example.config.CException;
+import com.example.model.User;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
@@ -17,13 +18,19 @@ import java.util.Map;
 @Api(value = "用户服务", description = "提供RESTful风格API的用户的增删改查服务")
 public class UserController {
     //模拟DAO层
-    private final Map<Long, User> repository = new HashMap<Long, User>();
+    private final Map<Long, User> repository = new HashMap<>();
 
     @PostMapping
     @ApiOperation("添加用户")
-    public Boolean add(@RequestBody User user) {
+    public Boolean add(@RequestBody User user) throws Exception {
         repository.put(user.getId(), user);
+        if (user != null) throw new CException("hello");
+        getException();
         return true;
+    }
+
+    private void getException() throws Exception {
+        throw new Exception("haha");
     }
 
     @DeleteMapping("/{id}")

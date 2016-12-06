@@ -1,8 +1,8 @@
-package example.web;
+package com.example.web;
 
-import example.dao.DeptDao;
-import example.domain.Dept;
-import example.service.impl.DeptService;
+import com.example.dao.DeptDao;
+import com.example.domain.Dept;
+import com.example.service.impl.DeptService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;

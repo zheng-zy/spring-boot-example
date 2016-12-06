@@ -14,7 +14,7 @@ spring:
     properties:
       hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/test?zeroDateTimeBehavior=convertToNull
+    url: jdbc:mysql://127.0.0.1:3306/test?zeroDateTimeBehavior=convertToNull&useSSL=false
     username: root
     password: 666666
     driver-class-name: com.mysql.jdbc.Driver
@@ -42,7 +42,7 @@ spring:
     elasticsearch:
       cluster-nodes: 192.168.97.192:9300
 server:
-  port: 8888
+  port: 8080
   context-path: /example
 logging:
   level:

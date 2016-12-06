@@ -1,4 +1,4 @@
-package example.web;
+package com.example.web;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
+ * <p><p/>
  * Created by zhezhiyong@163.com on 2016/10/12.
  */
 @Api(value = "计算服务", description = "简单的计算服务，提供加减乘除运算API")
